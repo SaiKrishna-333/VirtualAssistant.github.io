@@ -1,0 +1,13 @@
+{
+    "greetings": {
+        "morning": "Good morning! How can I assist you today?",
+        "afternoon": "Good afternoon! How may I help you?",
+        "evening": "Good evening! What can I do for you?"
+    },
+    "whoAreYou": "I am Viras, your virtual assistant created by Sai Krishna And Team. I'm here to help you with various tasks.",
+    "responses": {
+        "hello": "Hello! How can I help you today?",
+        "bye": "Goodbye! Have a great day!",
+        "thanks": "You're welcome!"
+    }
+}

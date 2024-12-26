@@ -1,0 +1,12 @@
+// data.xml
+<?xml version="1.0" encoding="UTF-8"?>
+<greetings>
+    <morning>Good morning! Ready to start the day?</morning>
+    <afternoon>Good afternoon! Hope you're having a productive day.</afternoon>
+    <evening>Good evening! How was your day?</evening>
+    <responses>
+        <hello>Hello! How can I assist you?</hello>
+        <bye>Goodbye! Take care!</bye>
+        <thanks>You're welcome! Let me know if you need anything else.</thanks>
+    </responses>
+</greetings>
