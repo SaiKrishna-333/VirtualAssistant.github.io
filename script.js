@@ -496,11 +496,11 @@ function takeCommand(message) {
     // Check if the message contains keywords related to cricket or sports
 
     // Check if the message contains keywords related to other general queries (e.g., tech, news)
-    // else if (message.includes("who is") || message.includes("what is") || message.includes("when is")) {
-    //     // You can check for more patterns here as needed
-    //     speak("Let me find this information for you...");
-    //     window.open(`https://www.google.com/search?q=${message}`, "_blank");
-    // }
+    else if (message.includes("who is") || message.includes("what is") || message.includes("when is")) {
+        // You can check for more patterns here as needed
+        speak("Let me find this information for you...");
+        window.open(`https://www.google.com/search?q=${message}`, "_blank");
+    }
     // For any other unmatched queries, fallback to a general search
     // else {
     //     speak(`Here are the details for ${message}`);
