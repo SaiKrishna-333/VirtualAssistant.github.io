@@ -502,26 +502,26 @@ function takeCommand(message) {
         window.open(`https://www.google.com/search?q=${message}`, "_blank");
     }
     // For any other unmatched queries, fallback to a general search
-    // else {
-    //     speak(`Here are the details for ${message}`);
-    //     window.open(`https://www.google.com/search?q=${message}`, "_blank");
-    //     }
     else {
-        fetch('data.xml')
-            .then(response => response.text())
-            .then(data => {
-                let parser = new DOMParser();
-                let xmlDoc = parser.parseFromString(data, "text/xml");
-                let defaultResponse = xmlDoc.getElementsByTagName("default")[0]?.childNodes[0]?.nodeValue
-                    || `Here are the details for ${message}`;
-                speak(defaultResponse);
-                window.open(`https://www.google.com/search?q=${message}`, "_blank");
-            })
-            .catch(() => {
-                speak(`Here are the details for ${message}`);
-                window.open(`https://www.google.com/search?q=${message}`, "_blank");
-            });
+        speak(`Here are the details for ${message}`);
+        window.open(`https://www.google.com/search?q=${message}`, "_blank");
     }
+    // else {
+    //     fetch('data.xml')
+    //         .then(response => response.text())
+    //         .then(data => {
+    //             let parser = new DOMParser();
+    //             let xmlDoc = parser.parseFromString(data, "text/xml");
+    //             let defaultResponse = xmlDoc.getElementsByTagName("default")[0]?.childNodes[0]?.nodeValue
+    //                 || `Here are the details for ${message}`;
+    //             speak(defaultResponse);
+    //             window.open(`https://www.google.com/search?q=${message}`, "_blank");
+    //         })
+    //         .catch(() => {
+    //             speak(`Here are the details for ${message}`);
+    //             window.open(`https://www.google.com/search?q=${message}`, "_blank");
+    //         });
+    // }
 }
 
 const voiceHandler = (command) => {
@@ -533,4 +533,4 @@ const voiceHandler = (command) => {
     } catch (error) {
       console.error('Command failed:', error);
     }
-  }
+}
