@@ -500,7 +500,7 @@ function takeCommand(message) {
     //     // You can check for more patterns here as needed
     //     speak("Let me find this information for you...");
     //     window.open(`https://www.google.com/search?q=${message}`, "_blank");
-    }
+    // }
     // For any other unmatched queries, fallback to a general search
     // else {
     //     speak(`Here are the details for ${message}`);
