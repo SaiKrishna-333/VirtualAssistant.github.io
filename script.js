@@ -201,6 +201,15 @@ function takeCommand(message) {
         speak("Opening latest news...")
         window.open("https://news.google.com/", "_blank")
     }
+    else if (message.includes("follow") && message.includes("on instagram")) {
+        let name = message.replace("follow", "").replace("on instagram", "").trim();
+        if (name) {
+            speak(`Searching Instagram for accounts with the name ${name}...`);
+            window.open(`https://www.instagram.com/explore/tags/${encodeURIComponent(name)}/`, "_blank");
+        } else {
+            speak("Please tell me the name of the Instagram account you want to follow.");
+        }
+    }
 
     // New function to open the weather website
     else if (message.includes("weather")) {
@@ -502,26 +511,26 @@ function takeCommand(message) {
         window.open(`https://www.google.com/search?q=${message}`, "_blank");
     }
     // For any other unmatched queries, fallback to a general search
-    else {
-        speak(`Here are the details for ${message}`);
-        window.open(`https://www.google.com/search?q=${message}`, "_blank");
-    }
     // else {
-    //     fetch('data.xml')
-    //         .then(response => response.text())
-    //         .then(data => {
-    //             let parser = new DOMParser();
-    //             let xmlDoc = parser.parseFromString(data, "text/xml");
-    //             let defaultResponse = xmlDoc.getElementsByTagName("default")[0]?.childNodes[0]?.nodeValue
-    //                 || `Here are the details for ${message}`;
-    //             speak(defaultResponse);
-    //             window.open(`https://www.google.com/search?q=${message}`, "_blank");
-    //         })
-    //         .catch(() => {
-    //             speak(`Here are the details for ${message}`);
-    //             window.open(`https://www.google.com/search?q=${message}`, "_blank");
-    //         });
-    // }
+    //     speak(`Here are the details for ${message}`);
+    //     window.open(`https://www.google.com/search?q=${message}`, "_blank");
+    //     }
+    else {
+        fetch('data.xml')
+            .then(response => response.text())
+            .then(data => {
+                let parser = new DOMParser();
+                let xmlDoc = parser.parseFromString(data, "text/xml");
+                let defaultResponse = xmlDoc.getElementsByTagName("default")[0]?.childNodes[0]?.nodeValue
+                    || `Here are the details for ${message}`;
+                speak(defaultResponse);
+                window.open(`https://www.google.com/search?q=${message}`, "_blank");
+            })
+            .catch(() => {
+                speak(`Here are the details for ${message}`);
+                window.open(`https://www.google.com/search?q=${message}`, "_blank");
+            });
+    }
 }
 
 const voiceHandler = (command) => {
@@ -533,4 +542,4 @@ const voiceHandler = (command) => {
     } catch (error) {
       console.error('Command failed:', error);
     }
-}
+  }
