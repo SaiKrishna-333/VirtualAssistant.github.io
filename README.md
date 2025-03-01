@@ -83,9 +83,8 @@ Steps of Implementation (Deploying & Running on GitHub)
           Structure an alternative data storage format in a .xml file for greetings and responses.
           Store both data.json and data.xml in the GitHub repository so the frontend can fetch the data.
     4. Implementing Server-Side Logic (Using GitHub Pages & Workarounds for PHP)
-        🚨 GitHub Pages does not support PHP directly, so follow these steps:
-
-          Option 1 (Host Backend Elsewhere & Use GitHub Pages for Frontend)
+        GitHub Pages does not support PHP directly, so follow these steps
+         Option 1 (Host Backend Elsewhere & Use GitHub Pages for Frontend)
             Deploy PHP backend on a free backend hosting service like:
             000WebHost (https://www.000webhost.com/)
             Heroku (Using PHP buildpack)
@@ -97,14 +96,11 @@ Steps of Implementation (Deploying & Running on GitHub)
             Store responses in JSON instead of dynamic PHP.       
     5. Connecting Frontend & Backend
          If using GitHub Pages (Frontend Only, No PHP)
-
          Host HTML, CSS, JS, JSON, XML files in the GitHub repository.
          Fetch data dynamically using JavaScript.
          Convert PHP-based functionality into JavaScript where possible.
          If using an External Backend (PHP Supported)
-
          Modify JavaScript Fetch API calls to request data from the hosted PHP backend.
-         
     6. Uploading to GitHub & Deploying on GitHub Pages
       Step 1: Create a GitHub Repository
           Go to GitHub and create a new repository.
