@@ -5,7 +5,7 @@ ________________________________________________________________________________
 Overview:
     • Uses the Web Speech API to capture voice commands.
     • Provides audio response for natural interaction.
-    • Offers personalized greetings based on the time of day.
+    • Offers personalized greetings based on the time of day.   
     • Fetches greetings dynamically from a local JSON file or XML file.
     • Retrieves the current time and date either from a PHP backend or local functions.
     • Provides natural spoken responses for time and date queries
