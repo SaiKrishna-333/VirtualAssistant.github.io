@@ -2,7 +2,7 @@ Problem Statement:
         “Voice-Activated Virtual Assistant": The goal is to create a virtual assistant, which caninteract with users through voice commands.
 ____________________________________________________________________________________________________________________________________________________________________________________________________________________
 
-Overview:
+Overview: 
     • Uses the Web Speech API to capture voice commands.
     • Provides audio response for natural interaction.
     • Offers personalized greetings based on the time of day.   
